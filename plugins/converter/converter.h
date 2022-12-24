@@ -102,7 +102,7 @@ typedef struct ddb_converter_settings_s {
 } ddb_converter_settings_t;
 
 typedef struct ddb_converter_abort_status_s {
-    pthread_rwlock_t *lock;
+    void *lock;
     int *abort;
 } ddb_converter_abort_status_t;
 
