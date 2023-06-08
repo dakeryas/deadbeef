@@ -8,6 +8,7 @@ jobs:
     steps:
     - name: Install dependencies for Linux
       run: |
+        export DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC
         apt-get -qq update
         apt-get install -y -qq autopoint automake autoconf intltool libc6-dev yasm libglib2.0-bin perl wget zip bzip2 make libtool pkg-config fakeroot clang openssh-client rsync
         sed -i 's/mozilla\/DST_Root_CA_X3\.crt/\!mozilla\/DST_Root_CA_X3\.crt/' /etc/ca-certificates.conf
